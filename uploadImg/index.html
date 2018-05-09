@@ -29,25 +29,15 @@
 </head>
 <body>
 <div id="myTable">
-    <div class="img-group">
-        <div class="img-wrapper" >
-            <div class="clear-img">x</div>
-            <img src="" width="100px" height="100px">
-        </div>
-        <div class="img-wrapper" >
-            <div class="clear-img">x</div>
-            <img src="" width="100px" height="100px">
-        </div>
-        <div class="img-wrapper">
-            <div class="clear-img">x</div>
-            <img src="" width="100px" height="100px">
-        </div>
-    </div>
-
-    <input type="file" name="upload" style="display: block;">
-    <input type="button" name="add" style="display: block;" value="add">
 
 </div>
+<script type="text/javascript" src="./jquery.js"></script>
 <script type="text/javascript" src="./index.js"></script>
+<script>
+    const options={
+        el:'#myTable'
+    }
+    pikiUploader({t:1})
+</script>
 </body>
 </html>
