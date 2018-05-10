@@ -11,8 +11,7 @@ function render(el) {
             const template = `
             <div class="img-group">
              </div>`
-            const btnTemplate = `<input type="file" name="upload" id="pikiUpload"/>
-                                <input type="button" name="add" value="add" id="pikiAdd"/>`
+            const btnTemplate = `<div class="piki-upload">Pick File<input type="file" name="upload" class="piki-upload-btn" id="pikiUpload"/></div>`
             element.append(template, btnTemplate)
         },
         addImgChild(url) {
@@ -29,11 +28,10 @@ function bindEvents(el, postUrl) {
         return $(el).on(type, tag, func)
     }
 
+    // 清除图片
     delegateEvent('.clear-img', (e) => {
-        console.log(111)
-    })
-    delegateEvent('#pikiAdd', () => {
-        console.log('pikiAdd')
+        const el = $(e.currentTarget)
+        el.parent().hide()
     })
 
     // 上传按钮
