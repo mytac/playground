@@ -8,11 +8,12 @@ function render(el) {
         </div>`
         },
         init() {
-            const template = `
-            <div class="img-group">
-             </div>`
-            const btnTemplate = `<div class="piki-upload">Pick File<input type="file" name="upload" class="piki-upload-btn" id="pikiUpload"/></div>`
-            element.append(template, btnTemplate)
+            const template = `<div class="piki"><div class="img-group">
+                <p class="piki-tips">drop file to upload.</p>
+                <div class="piki-default-box">+</div>
+    
+            </div><div class="piki-upload"><span>Pick File</span><input type="file" name="upload" class="piki-upload-btn" id="pikiUpload"/></div></div>`
+            element.append(template)
         },
         addImgChild(url) {
             const imgTemplate = this.imgUrl(url)
