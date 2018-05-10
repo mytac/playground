@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>21111</title>
     <style type="text/css">
         .img-wrapper{
@@ -35,9 +36,10 @@
 <script type="text/javascript" src="./index.js"></script>
 <script>
     const options={
-        el:'#myTable'
+        el:'#myTable',
+        postUrl:'http://106.75.50.97:8866/upload'
     }
-    pikiUploader({t:1})
+    pikiUploader(options)
 </script>
 </body>
 </html>
